@@ -71,7 +71,6 @@ class Student
     WHERE grade = ? 
      SQL
     DB[:conn].execute(sql, x)
-    end 
   end 
   
   def self.first_student_in_grade_10
