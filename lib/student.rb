@@ -35,6 +35,18 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
   end
   
+  def self.all_students_in_grade_9 
+    sql=<<-SQL 
+    SELECT *
+    FROM students
+    WHERE grade = 9 
+     SQL
+     
+     DB[:conn].exectue(sql).map do |row|
+       self.new_from_db(row)
+     end 
+   end 
+  
   def self.create_table
     sql = <<-SQL
     CREATE TABLE IF NOT EXISTS students (
