@@ -23,7 +23,6 @@ class Student
      SQL
      
      DB[:conn].execute(sql) #.map do |row|
-    end 
   end 
     
     # find the student in the database given a name
