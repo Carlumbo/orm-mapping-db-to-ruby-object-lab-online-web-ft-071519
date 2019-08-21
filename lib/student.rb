@@ -22,7 +22,7 @@ class Student
     LIMIT 1 
      SQL
      
-     DB[:conn].execute(sql) #.map do |row|
+    # DB[:conn].execute(sql) #.map do |row|
   end 
     
     # find the student in the database given a name
